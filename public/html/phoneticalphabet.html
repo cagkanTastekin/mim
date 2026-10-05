@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="theme-color" content="#f5f5ef">
+		<title>Phonetic Alphabet | GEM/MIM Portal</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+		<script src="../js/theme.js"></script>
+		<link rel="stylesheet" href="../css/styles.css">
+		<script src="../js/phoneticalphabet.js" defer></script>
+	</head>
+	<body>
+		<main class="pronunciation-page">
+			<h1 class="pronunciation-title">Phonetic Alphabet</h1>
+			<section class="spelling-tool" aria-labelledby="spelling-title">
+				<h2 class="spelling-title" id="spelling-title">Spell a word</h2>
+				<label class="spelling-label" for="spelling-input">Enter a word or phrase</label>
+				<div class="spelling-input-wrap">
+					<input class="spelling-input" id="spelling-input" type="search" autocomplete="off" spellcheck="false" placeholder="For example, Charlie">
+					<button class="popup-search-clear" id="spelling-input-clear" type="button" aria-label="Clear spelling input" title="Clear input" hidden>×</button>
+				</div>
+				<p class="spelling-hint">Type letters, numbers, or symbols. Spaces separate words.</p>
+				<div class="spelling-output" id="spelling-output" aria-live="polite" aria-relevant="additions text"></div>
+				<p class="spelling-status" id="spelling-status">Your phonetic spelling will appear here.</p>
+			</section>
+			<section class="pronunciation-section" aria-labelledby="letters-title">
+				<h2 class="pronunciation-section-title" id="letters-title">Letters</h2>
+				<ol class="pronunciation-list" id="letter-list" aria-label="Phonetic alphabet letters and pronunciations"></ol>
+			</section>
+			<section class="pronunciation-section" aria-labelledby="numbers-title">
+				<h2 class="pronunciation-section-title" id="numbers-title">Numbers</h2>
+				<ol class="pronunciation-list number-list" id="number-list" aria-label="Number names and pronunciations"></ol>
+			</section>
+			<section class="pronunciation-section" aria-labelledby="symbols-title">
+				<h2 class="pronunciation-section-title" id="symbols-title">Symbols</h2>
+				<ol class="pronunciation-list" id="symbol-list" aria-label="Symbol names"></ol>
+			</section>
+		</main>
+	</body>
+</html>

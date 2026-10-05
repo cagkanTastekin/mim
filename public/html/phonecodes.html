@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="theme-color" content="#f5f5ef">
+		<meta name="description" content="Search country phone calling codes.">
+		<title>Phone Codes | GEM/MIM Portal</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+		<script src="../js/theme.js"></script>
+		<link rel="stylesheet" href="../css/styles.css">
+		<script src="../js/phonecodes.js" defer></script>
+	</head>
+	<body>
+		<main class="phonecodes-page">
+			<h1 class="phonecodes-title">Phone Codes</h1>
+			<div class="phonecodes-tools">
+				<label class="phonecodes-search-label" for="country-search">Find a country or phone code</label>
+				<div class="phonecodes-search-wrap">
+					<input class="phonecodes-search" id="country-search" type="search" placeholder="Country or calling code" autocomplete="off" spellcheck="false">
+					<span class="phonecodes-search-icon" aria-hidden="true"></span>
+					<button class="popup-search-clear" id="country-search-clear" type="button" aria-label="Clear country search" title="Clear search" hidden>×</button>
+				</div>
+				<p class="phonecodes-count" id="country-count" aria-live="polite">Loading countries</p>
+			</div>
+			<div class="phonecodes-table-wrap">
+				<table class="phonecodes-table">
+					<thead><tr><th scope="col">Country</th><th scope="col">Phone code</th></tr></thead>
+					<tbody id="country-rows"></tbody>
+				</table>
+				<p class="phonecodes-empty" id="country-empty" hidden>No matching countries or codes.</p>
+			</div>
+		</main>
+	</body>
+</html>

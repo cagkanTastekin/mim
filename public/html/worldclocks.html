@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="theme-color" content="#f5f5ef">
+		<title>World Clocks | GEM/MIM Portal</title>
+		<script src="../js/theme.js"></script>
+		<link rel="stylesheet" href="../css/styles.css">
+		<script src="../js/worldclocks.js" defer></script>
+	</head>
+	<body>
+		<main class="world-clocks-page">
+			<h1 class="world-clocks-title">World Clocks</h1>
+			<div class="world-clocks-layout">
+				<figure class="world-map">
+					<div class="world-map-canvas">
+						<img src="../pic/world.svg" alt="Map of the world">
+						<svg class="world-map-overlay" viewBox="0 0 2000 857" preserveAspectRatio="none" aria-hidden="true">
+							<path class="world-night-zone" id="world-night-zone"></path>
+							<g id="world-clock-pins"></g>
+						</svg>
+					</div>
+				</figure>
+				<section class="world-clock-list" id="world-clock-list" aria-label="Current local and world times"></section>
+			</div>
+		</main>
+	</body>
+</html>

@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="theme-color" content="#f5f5ef">
+		<meta name="description" content="Welcome to the GEM/MIM portal. Browse a quick, searchable phonetic alphabet reference.">
+		<title>GEM/MIM Portal</title>
+		<script src="public/js/theme.js"></script>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="public/css/styles.css">
+		<script src="public/js/index.js" defer></script>
+	</head>
+	<body>
+		<header class="site-header">
+			<nav aria-label="Main navigation">
+				<div class="header-references">
+					<button class="nav-link" type="button" data-open-alphabet aria-haspopup="dialog" aria-controls="alphabet-dialog">Phonetic Alphabet</button>
+					<button class="nav-link phonecodes-link" type="button" data-open-phonecodes aria-haspopup="dialog" aria-controls="phonecodes-dialog">Phone Codes</button>
+					<button class="nav-link irams-link" type="button" data-open-irams aria-haspopup="dialog">IRAMS Wording</button>
+					<button class="nav-link" type="button" data-open-links aria-haspopup="dialog" aria-controls="links-dialog">Useful Links</button>
+					<button class="nav-link" type="button" data-open-passwordgenerator aria-haspopup="dialog" aria-controls="passwordgenerator-dialog">Password Generator</button>
+					<button class="nav-link" type="button" data-open-worldclocks aria-haspopup="dialog" aria-controls="worldclocks-dialog">World Clocks</button>
+					<button class="nav-link" type="button" data-open-timeconverter aria-haspopup="dialog" aria-controls="timeconverter-dialog">Time Converter</button>
+				</div>
+				<button class="theme-toggle" id="theme-toggle" type="button" role="switch" aria-checked="false" aria-label="Dark mode" title="Switch to dark mode">
+					<span>Light</span><span class="theme-toggle-track" aria-hidden="true"><span></span></span><span>Dark</span>
+				</button>
+			</nav>
+		</header>
+
+		<main id="home">
+			<section class="welcome" aria-labelledby="welcome-title">
+				<div class="welcome-copy">
+					<p class="eyebrow"><span class="status-dot" aria-hidden="true"></span> YOUR PORTAL, AT A GLANCE</p>
+					<h1 id="welcome-title">Welcome to the<br><span>GEM/MIM portal.</span></h1>
+					<p class="welcome-description">Clear communication starts here.</p>
+				</div>
+			</section>
+
+		</main>
+
+		<dialog class="alphabet-dialog" id="alphabet-dialog" aria-label="Phonetic Alphabet Reference">
+			<div class="dialog-toolbar">
+				<div class="dialog-actions">
+					<button class="dialog-minimize" type="button" data-minimize="alphabet-dialog" aria-label="Minimize phonetic alphabet" title="Minimize">−</button>
+					<button class="dialog-close" id="dialog-close" type="button" aria-label="Close phonetic alphabet" title="Close">×</button>
+				</div>
+			</div>
+			<iframe class="alphabet-frame" id="alphabet-frame" src="public/html/phoneticalphabet.html" title="Phonetic alphabet with pronunciations"></iframe>
+		</dialog>
+		<dialog class="alphabet-dialog" id="phonecodes-dialog" aria-label="Phone Codes Reference">
+			<div class="dialog-toolbar">
+				<div class="dialog-actions">
+					<button class="dialog-minimize" type="button" data-minimize="phonecodes-dialog" aria-label="Minimize phone codes" title="Minimize">−</button>
+					<button class="dialog-close" id="phonecodes-dialog-close" type="button" aria-label="Close phone codes" title="Close">×</button>
+				</div>
+			</div>
+			<iframe class="alphabet-frame" id="phonecodes-frame" src="public/html/phonecodes.html" title="Country phone codes"></iframe>
+		</dialog>
+		<template id="irams-dialog-template">
+			<dialog class="alphabet-dialog" aria-label="IRAMS Wording Generator">
+				<div class="dialog-toolbar">
+					<div class="dialog-actions">
+						<button class="dialog-minimize" type="button" data-minimize-irams aria-label="Minimize IRAMS wording" title="Minimize">−</button>
+						<button class="dialog-close" type="button" data-close-irams aria-label="Close IRAMS wording" title="Close">×</button>
+					</div>
+				</div>
+				<iframe class="alphabet-frame" src="public/html/iramswording.html" title="IRAMS wording generator"></iframe>
+			</dialog>
+		</template>
+		<dialog class="alphabet-dialog" id="links-dialog" aria-label="Useful Links Collection">
+			<div class="dialog-toolbar">
+				<div class="dialog-actions">
+					<button class="dialog-minimize" type="button" data-minimize="links-dialog" aria-label="Minimize useful links" title="Minimize">−</button>
+					<button class="dialog-close" id="links-dialog-close" type="button" aria-label="Close useful links" title="Close">×</button>
+				</div>
+			</div>
+			<iframe class="alphabet-frame" id="links-frame" src="public/html/links.html" title="Useful links"></iframe>
+		</dialog>
+		<dialog class="alphabet-dialog" id="passwordgenerator-dialog" aria-label="Password Generator">
+			<div class="dialog-toolbar">
+				<div class="dialog-actions">
+					<button class="dialog-minimize" type="button" data-minimize="passwordgenerator-dialog" aria-label="Minimize password generator" title="Minimize">−</button>
+					<button class="dialog-close" id="passwordgenerator-dialog-close" type="button" aria-label="Close password generator" title="Close">×</button>
+				</div>
+			</div>
+			<iframe class="alphabet-frame" id="passwordgenerator-frame" src="public/html/passwordgenerator.html" title="Password generator"></iframe>
+		</dialog>
+		<dialog class="alphabet-dialog worldclocks-dialog" id="worldclocks-dialog" aria-label="World Clocks">
+			<div class="dialog-toolbar">
+				<div class="dialog-actions">
+					<button class="dialog-minimize" type="button" data-minimize="worldclocks-dialog" aria-label="Minimize world clocks" title="Minimize">−</button>
+					<button class="dialog-close" id="worldclocks-dialog-close" type="button" aria-label="Close world clocks" title="Close">×</button>
+				</div>
+			</div>
+			<iframe class="alphabet-frame worldclocks-frame" id="worldclocks-frame" src="public/html/worldclocks.html" title="World clocks"></iframe>
+		</dialog>
+		<dialog class="alphabet-dialog" id="timeconverter-dialog" aria-label="Time Converter">
+			<div class="dialog-toolbar">
+				<div class="dialog-actions">
+					<button class="dialog-minimize" type="button" data-minimize="timeconverter-dialog" aria-label="Minimize time converter" title="Minimize">−</button>
+					<button class="dialog-close" id="timeconverter-dialog-close" type="button" aria-label="Close time converter" title="Close">×</button>
+				</div>
+			</div>
+			<iframe class="alphabet-frame" id="timeconverter-frame" src="public/html/timeconverter.html" title="Time converter"></iframe>
+		</dialog>
+		<div class="minimized-dialog-dock" id="minimized-dialog-dock" role="group" aria-label="Minimized popups" hidden></div>
+	</body>
+</html>

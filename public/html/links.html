@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="theme-color" content="#f5f5ef">
+		<title>Useful Links | GEM/MIM Portal</title>
+		<script src="../js/theme.js"></script>
+		<link rel="stylesheet" href="../css/styles.css">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+		<script src="../js/links.js" defer></script>
+	</head>
+	<body>
+		<main class="links-page">
+			<h1 class="links-title">Useful Links</h1>
+			<div class="links-tools">
+				<label class="links-search-label" for="links-search">Search links</label>
+				<div class="links-search-wrap">
+					<input class="links-search" id="links-search" type="search" placeholder="Search title or details" autocomplete="off" spellcheck="false">
+					<span class="links-search-icon" aria-hidden="true"></span>
+					<button class="popup-search-clear" id="links-search-clear" type="button" aria-label="Clear links search" title="Clear search" hidden>×</button>
+				</div>
+				<p class="links-count" id="links-count" aria-live="polite">0 links</p>
+			</div>
+			<div class="links-groups" id="links-groups"></div>
+			<p class="links-empty" id="links-empty" aria-live="polite">No useful links have been added yet.</p>
+		</main>
+	</body>
+</html>

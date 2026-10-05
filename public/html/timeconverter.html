@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="theme-color" content="#f5f5ef">
+		<title>Time Converter | GEM/MIM Portal</title>
+		<script src="../js/theme.js"></script>
+		<link rel="stylesheet" href="../css/styles.css">
+		<script src="../js/timeconverter.js" defer></script>
+	</head>
+	<body>
+		<main class="time-converter-page">
+			<p class="time-converter-kicker">TIME ZONE CONVERTER</p>
+			<h1 class="time-converter-title">Convert a time</h1>
+			<div class="time-converter-controls">
+				<div class="time-converter-fields">
+					<div class="time-converter-input-wrap">
+						<label for="source-zone">Input timezone</label>
+						<select class="time-converter-select" id="source-zone">
+							<option value="Etc/GMT">GMT</option>
+							<option value="UTC">UTC</option>
+							<option value="Europe/London">London</option>
+							<option value="Europe/Budapest">Budapest</option>
+							<option value="Asia/Kolkata">India</option>
+						</select>
+					</div>
+					<div class="time-converter-input-wrap">
+						<label for="source-time">Date and time</label>
+						<input id="source-time" type="datetime-local" step="60">
+					</div>
+				</div>
+				<p class="time-converter-zone-note" id="source-time-status" role="status" aria-live="polite"></p>
+			</div>
+			<section class="time-converter-results" aria-label="Converted times">
+				<article class="time-converter-result" data-time-zone="Etc/GMT">
+					<h2>GMT</h2>
+					<time class="time-converter-time"></time>
+					<p class="time-converter-date"></p>
+					<p class="time-converter-zone"></p>
+				</article>
+				<article class="time-converter-result" data-time-zone="UTC">
+					<h2>UTC</h2>
+					<time class="time-converter-time"></time>
+					<p class="time-converter-date"></p>
+					<p class="time-converter-zone"></p>
+				</article>
+				<article class="time-converter-result" data-time-zone="Europe/London">
+					<h2>London</h2>
+					<time class="time-converter-time"></time>
+					<p class="time-converter-date"></p>
+					<p class="time-converter-zone"></p>
+				</article>
+				<article class="time-converter-result" data-time-zone="Europe/Budapest">
+					<h2>Budapest</h2>
+					<time class="time-converter-time"></time>
+					<p class="time-converter-date"></p>
+					<p class="time-converter-zone"></p>
+				</article>
+				<article class="time-converter-result" data-time-zone="Asia/Kolkata">
+					<h2>India</h2>
+					<time class="time-converter-time"></time>
+					<p class="time-converter-date"></p>
+					<p class="time-converter-zone"></p>
+				</article>
+			</section>
+		</main>
+	</body>
+</html>

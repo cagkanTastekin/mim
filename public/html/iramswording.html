@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="theme-color" content="#f5f5ef">
+		<meta name="description" content="Generate IRAMS customer-impact wording.">
+		<title>IRAMS Wording | GEM/MIM Portal</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+		<script src="../js/theme.js"></script>
+		<link rel="stylesheet" href="../css/styles.css">
+		<script src="../js/iramswording.js" defer></script>
+	</head>
+	<body>
+		<main class="irams-page">
+			<h1 class="irams-title">IRAMS Wording</h1>
+			<p class="irams-form-error" id="irams-form-error" role="alert" hidden></p>
+			<form class="irams-form" id="irams-form">
+				<div class="irams-count-fields">
+					<div class="irams-field">
+						<label for="affected-connections">Affected Connections</label>
+						<input id="affected-connections" name="affectedConnections" type="text" inputmode="numeric" autocomplete="off" pattern="[0-9]*" placeholder="0" aria-describedby="connections-help">
+						<span class="irams-field-hint" id="connections-help">Numbers only</span>
+					</div>
+					<div class="irams-field">
+						<label for="affected-customers">Affected customers</label>
+						<input id="affected-customers" name="affectedCustomers" type="text" inputmode="numeric" autocomplete="off" pattern="[0-9]*" placeholder="0" aria-describedby="customers-help">
+						<span class="irams-field-hint" id="customers-help">Numbers only</span>
+					</div>
+				</div>
+
+				<div class="irams-field">
+					<label for="impacted-customers">Customers</label>
+					<textarea id="impacted-customers" name="impactedCustomers" rows="5" placeholder="One Customer Per Line"></textarea>
+					<span class="irams-field-hint">Enter one customer per line.</span>
+				</div>
+
+				<label class="irams-checkbox" for="customer-escalation">
+					<input id="customer-escalation" name="customerEscalation" type="checkbox">
+					<span>Any customer initiated an escalation?</span>
+				</label>
+
+				<div class="irams-field">
+					<label for="escalated-customers">Customers who escalated the case</label>
+					<textarea id="escalated-customers" name="escalatedCustomers" rows="3" placeholder="One Customer Per Line" disabled aria-describedby="escalated-help"></textarea>
+					<span class="irams-field-hint" id="escalated-help">Available when customer escalation is selected.</span>
+				</div>
+				<button class="irams-generate-button" type="submit">SUBMIT</button>
+			</form>
+
+			<section class="irams-output-section" aria-labelledby="output-title">
+				<div class="irams-output-heading">
+					<h2 id="output-title">Generated wording</h2>
+					<button class="irams-copy-button" id="copy-wording" type="button" title="Copy generated wording" aria-label="Copy generated wording" disabled>Copy</button>
+				</div>
+				<textarea class="irams-output" id="generated-wording" rows="6" readonly placeholder="Complete the fields, then select Generate wording." aria-live="polite"></textarea>
+				<div class="irams-field irams-reference-field">
+					<label for="irams-reference">IRAMS Reference</label>
+					<input id="irams-reference" name="iramsReference" type="text" autocomplete="off">
+				</div>
+				<p class="irams-copy-status" id="copy-status" aria-live="polite"></p>
+			</section>
+		</main>
+	</body>
+</html>

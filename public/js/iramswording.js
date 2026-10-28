@@ -62,12 +62,11 @@ function formatCustomerList(value) {
 
 function notifyParentOfReference() {
 	if (!instanceId) return;
-	const targetOrigin = window.location.origin === "null" ? "*" : window.location.origin;
 	window.parent.postMessage({
 		type: "irams-reference",
 		instanceId,
 		reference: iramsReferenceInput.value.trim(),
-	}, targetOrigin);
+	}, "*");
 }
 
 function copyWordingFallback(value) {

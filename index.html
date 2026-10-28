@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<meta name="theme-color" content="#f5f5ef">
+		<meta name="theme-color" content="#252927">
 		<meta name="description" content="Welcome to the GEM/MIM portal. Browse a quick, searchable phonetic alphabet reference.">
 		<title>GEM/MIM Portal</title>
 		<script src="public/js/theme.js"></script>
@@ -24,10 +24,8 @@
 					<button class="nav-link" type="button" data-open-passwordgenerator aria-haspopup="dialog" aria-controls="passwordgenerator-dialog">Password Generator</button>
 					<button class="nav-link" type="button" data-open-worldclocks aria-haspopup="dialog" aria-controls="worldclocks-dialog">World Clocks</button>
 					<button class="nav-link" type="button" data-open-timeconverter aria-haspopup="dialog" aria-controls="timeconverter-dialog">Time Converter</button>
+					<button class="nav-link" type="button" data-open-reminder aria-haspopup="dialog">Reminder</button>
 				</div>
-				<button class="theme-toggle" id="theme-toggle" type="button" role="switch" aria-checked="false" aria-label="Dark mode" title="Switch to dark mode">
-					<span>Light</span><span class="theme-toggle-track" aria-hidden="true"><span></span></span><span>Dark</span>
-				</button>
 			</nav>
 		</header>
 
@@ -44,6 +42,7 @@
 
 		<dialog class="alphabet-dialog" id="alphabet-dialog" aria-label="Phonetic Alphabet Reference">
 			<div class="dialog-toolbar">
+				<h2 class="dialog-title">Phonetic Alphabet</h2>
 				<div class="dialog-actions">
 					<button class="dialog-minimize" type="button" data-minimize="alphabet-dialog" aria-label="Minimize phonetic alphabet" title="Minimize">−</button>
 					<button class="dialog-close" id="dialog-close" type="button" aria-label="Close phonetic alphabet" title="Close">×</button>
@@ -53,6 +52,7 @@
 		</dialog>
 		<dialog class="alphabet-dialog" id="phonecodes-dialog" aria-label="Phone Codes Reference">
 			<div class="dialog-toolbar">
+				<h2 class="dialog-title">Phone Codes</h2>
 				<div class="dialog-actions">
 					<button class="dialog-minimize" type="button" data-minimize="phonecodes-dialog" aria-label="Minimize phone codes" title="Minimize">−</button>
 					<button class="dialog-close" id="phonecodes-dialog-close" type="button" aria-label="Close phone codes" title="Close">×</button>
@@ -63,6 +63,7 @@
 		<template id="irams-dialog-template">
 			<dialog class="alphabet-dialog" aria-label="IRAMS Wording Generator">
 				<div class="dialog-toolbar">
+					<h2 class="dialog-title" data-popup-title>IRAMS Wording</h2>
 					<div class="dialog-actions">
 						<button class="dialog-minimize" type="button" data-minimize-irams aria-label="Minimize IRAMS wording" title="Minimize">−</button>
 						<button class="dialog-close" type="button" data-close-irams aria-label="Close IRAMS wording" title="Close">×</button>
@@ -73,6 +74,7 @@
 		</template>
 		<dialog class="alphabet-dialog" id="links-dialog" aria-label="Useful Links Collection">
 			<div class="dialog-toolbar">
+				<h2 class="dialog-title">Useful Links</h2>
 				<div class="dialog-actions">
 					<button class="dialog-minimize" type="button" data-minimize="links-dialog" aria-label="Minimize useful links" title="Minimize">−</button>
 					<button class="dialog-close" id="links-dialog-close" type="button" aria-label="Close useful links" title="Close">×</button>
@@ -82,6 +84,7 @@
 		</dialog>
 		<dialog class="alphabet-dialog" id="passwordgenerator-dialog" aria-label="Password Generator">
 			<div class="dialog-toolbar">
+				<h2 class="dialog-title">Password Generator</h2>
 				<div class="dialog-actions">
 					<button class="dialog-minimize" type="button" data-minimize="passwordgenerator-dialog" aria-label="Minimize password generator" title="Minimize">−</button>
 					<button class="dialog-close" id="passwordgenerator-dialog-close" type="button" aria-label="Close password generator" title="Close">×</button>
@@ -91,6 +94,7 @@
 		</dialog>
 		<dialog class="alphabet-dialog worldclocks-dialog" id="worldclocks-dialog" aria-label="World Clocks">
 			<div class="dialog-toolbar">
+				<h2 class="dialog-title">World Clocks</h2>
 				<div class="dialog-actions">
 					<button class="dialog-minimize" type="button" data-minimize="worldclocks-dialog" aria-label="Minimize world clocks" title="Minimize">−</button>
 					<button class="dialog-close" id="worldclocks-dialog-close" type="button" aria-label="Close world clocks" title="Close">×</button>
@@ -100,6 +104,7 @@
 		</dialog>
 		<dialog class="alphabet-dialog" id="timeconverter-dialog" aria-label="Time Converter">
 			<div class="dialog-toolbar">
+				<h2 class="dialog-title">Time Converter</h2>
 				<div class="dialog-actions">
 					<button class="dialog-minimize" type="button" data-minimize="timeconverter-dialog" aria-label="Minimize time converter" title="Minimize">−</button>
 					<button class="dialog-close" id="timeconverter-dialog-close" type="button" aria-label="Close time converter" title="Close">×</button>
@@ -107,6 +112,18 @@
 			</div>
 			<iframe class="alphabet-frame" id="timeconverter-frame" src="public/html/timeconverter.html" title="Time converter"></iframe>
 		</dialog>
+		<template id="reminder-dialog-template">
+			<dialog class="alphabet-dialog reminder-dialog" aria-label="Reminder">
+				<div class="dialog-toolbar">
+					<h2 class="dialog-title" data-reminder-title>REMINDER</h2>
+					<div class="dialog-actions">
+						<button class="dialog-minimize" type="button" data-minimize-reminder aria-label="Minimize reminder" title="Minimize">−</button>
+						<button class="dialog-close" type="button" data-close-reminder aria-label="Close reminder" title="Close">×</button>
+					</div>
+				</div>
+				<iframe class="alphabet-frame" src="public/html/reminder.html" title="Reminder"></iframe>
+			</dialog>
+		</template>
 		<div class="minimized-dialog-dock" id="minimized-dialog-dock" role="group" aria-label="Minimized popups" hidden></div>
 	</body>
 </html>

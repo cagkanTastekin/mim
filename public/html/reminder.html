@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="theme-color" content="#343a37">
+		<title>Reminder | GEM/MIM Portal</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+		<script src="../js/theme.js"></script>
+		<link rel="stylesheet" href="../css/styles.css">
+		<script src="../js/reminder.js" defer></script>
+	</head>
+	<body>
+		<main class="reminder-page">
+			<h1 class="reminder-title">Reminder details</h1>
+			<form class="reminder-form" id="reminder-form">
+				<div class="reminder-top-fields">
+					<div class="reminder-field">
+						<label for="incident-number">Incident number</label>
+						<input id="incident-number" name="incidentNumber" type="text" autocomplete="off">
+					</div>
+					<div class="reminder-field">
+						<label for="isp-reference">ISP reference</label>
+						<input id="isp-reference" name="ispReference" type="text" autocomplete="off">
+					</div>
+				</div>
+				<div class="reminder-subject-fields">
+					<div class="reminder-subject">
+						<div class="reminder-subject-row">
+							<div class="reminder-field">
+								<label for="isp-mail-subject">ISP mail subject</label>
+								<input id="isp-mail-subject" name="ispMailSubject" type="text" autocomplete="off">
+							</div>
+							<label class="reminder-schedule-toggle" for="isp-reminder-enabled">
+								<input id="isp-reminder-enabled" type="checkbox">
+								<span>Remind</span>
+							</label>
+						</div>
+						<div class="reminder-schedule" id="isp-schedule" hidden>
+							<label for="isp-reminder-time">Next action time</label>
+							<input id="isp-reminder-time" type="datetime-local">
+							<div class="reminder-timer-actions">
+								<button class="reminder-set-button" id="isp-reminder-set" type="button">Set</button>
+								<div class="reminder-countdown-wrap">
+									<span>Time remaining</span>
+									<output class="reminder-countdown" id="isp-countdown" aria-label="Time remaining">--:--</output>
+								</div>
+							</div>
+							<p class="reminder-schedule-message" id="isp-schedule-message" role="status" aria-live="polite"></p>
+						</div>
+					</div>
+					<div class="reminder-subject">
+						<div class="reminder-subject-row">
+							<div class="reminder-field">
+								<label for="customer-mail-subject">Customer mail subject</label>
+								<input id="customer-mail-subject" name="customerMailSubject" type="text" autocomplete="off">
+							</div>
+							<label class="reminder-schedule-toggle" for="customer-reminder-enabled">
+								<input id="customer-reminder-enabled" type="checkbox">
+								<span>Remind</span>
+							</label>
+						</div>
+						<div class="reminder-schedule" id="customer-schedule" hidden>
+							<label for="customer-reminder-time">Next action time</label>
+							<input id="customer-reminder-time" type="datetime-local">
+							<div class="reminder-timer-actions">
+								<button class="reminder-set-button" id="customer-reminder-set" type="button">Set</button>
+								<div class="reminder-countdown-wrap">
+									<span>Time remaining</span>
+									<output class="reminder-countdown" id="customer-countdown" aria-label="Time remaining">--:--</output>
+								</div>
+							</div>
+							<p class="reminder-schedule-message" id="customer-schedule-message" role="status" aria-live="polite"></p>
+						</div>
+					</div>
+				</div>
+				<p class="reminder-status" id="reminder-status" role="status" aria-live="polite"></p>
+			</form>
+		</main>
+	</body>
+</html>
